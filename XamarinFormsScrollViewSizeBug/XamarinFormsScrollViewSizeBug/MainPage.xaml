@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsScrollViewSizeBug.MainPage"
+             x:Name="page">
+    <ScrollView BackgroundColor="DarkBlue" Orientation="Both" Padding="5.0">
+        <Frame BackgroundColor="DarkGreen"
+               BorderColor="White"
+               CornerRadius="0.0"
+               HeightRequest="{Binding Path=Height, Source={x:Reference page}}"
+               Margin="30.0"
+               Padding="0.0"
+               WidthRequest="{Binding Path=Width, Source={x:Reference page}}" />
+    </ScrollView>
+</ContentPage>
